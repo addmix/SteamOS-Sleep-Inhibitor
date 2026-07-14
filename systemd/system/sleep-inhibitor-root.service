@@ -1,0 +1,13 @@
+[Unit]
+Description=Sleep Inhibitor Root Helper
+After=systemd-user-sessions.service
+BindsTo=user@1000.service
+PartOf=gamescope-session-plus@ogui-steam.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/sleep_inhibitor --root
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

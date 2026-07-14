@@ -1,0 +1,12 @@
+[Unit]
+Description=ScreenSaver Sleep Inhibitor Proxy
+After=gamescope-session-plus@ogui-steam.service
+PartOf=gamescope-session-plus@ogui-steam.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/sleep_inhibitor
+Restart=on-failure
+
+[Install]
+WantedBy=gamescope-session-plus@ogui-steam.service
