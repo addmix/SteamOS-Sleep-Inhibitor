@@ -5,7 +5,7 @@ PartOf=gamescope-session-plus@ogui-steam.service
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/sleep_inhibitor
+ExecStart=/usr/bin/sleep_inhibitor
 Restart=on-failure
 
 [Install]
